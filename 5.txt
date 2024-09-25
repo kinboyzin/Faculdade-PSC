@@ -1,0 +1,49 @@
+package fundamentos;
+
+import javax.swing.JOptionPane;
+
+public class FACULDADE_ATV5 {
+public static void main(String[] args) {
+	String primeiro = JOptionPane.showInputDialog("Digite um número: ");
+	String segundo = JOptionPane.showInputDialog("Digite um número: ");
+	String terceiro = JOptionPane.showInputDialog("Digite um número: ");
+	double primeiroDouble = Double.parseDouble(primeiro);
+	double segundoDouble = Double.parseDouble(segundo);
+	double terceiroDouble = Double.parseDouble(terceiro);
+	double maior, intermediario, menor;
+	
+	if (primeiroDouble > segundoDouble && primeiroDouble > terceiroDouble) {
+		maior = primeiroDouble;
+		if (segundoDouble > terceiroDouble) {
+			intermediario = segundoDouble;
+			menor = terceiroDouble;
+					
+		} else {
+			intermediario = terceiroDouble;
+			menor = segundoDouble;
+			
+		}
+	} else if (segundoDouble > primeiroDouble && segundoDouble > terceiroDouble) {
+		maior = segundoDouble;
+		if (primeiroDouble > terceiroDouble) {
+			intermediario = primeiroDouble;
+			menor = terceiroDouble;
+		} else {
+			intermediario = terceiroDouble;
+			menor = primeiroDouble;
+		}
+	} else {
+		maior = terceiroDouble;
+		if (primeiroDouble > segundoDouble) {
+			intermediario = primeiroDouble;
+			menor = segundoDouble;
+		} else {
+			intermediario = segundoDouble;
+			menor = primeiroDouble;
+		}
+	}
+	System.out.println("Maior: " + maior);
+	System.out.println("Intermediário: " + intermediario);
+	System.out.println("Menor: " + menor );
+}
+}

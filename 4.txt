@@ -1,0 +1,22 @@
+package fundamentos;
+
+import javax.swing.JOptionPane;
+
+public class FACULDADE_ATV4 {
+    public static void main(String[] args) {
+       
+        String nome = JOptionPane.showInputDialog("Digite um nome").trim().toUpperCase();
+
+        char primeiraLetra = nome.charAt(0);
+
+        if (primeiraLetra >= 'A' && primeiraLetra < 'K') {
+            System.out.println("O aluno " + nome + " está na divisão D1.");
+        } else if (primeiraLetra >= 'L' && primeiraLetra < 'N') {
+            System.out.println("O aluno " + nome + " está na divisão D2.");
+        } else if (primeiraLetra >= 'O' && primeiraLetra <= 'Z') {
+            System.out.println("O aluno " + nome + " está na divisão D3.");
+        } else {
+            System.out.println("Nome inválido.");
+        }
+    }
+}

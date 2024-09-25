@@ -1,0 +1,29 @@
+package fundamentos;
+
+import javax.swing.JOptionPane;
+
+public class FACULDADE_ATV1_1 {
+public static void main(String[] args) {
+	String r1 = JOptionPane.showInputDialog("Digite o valor da primeira reta:");
+	String r2 = JOptionPane.showInputDialog("Digite o valor da segunda reta:");
+	String r3 = JOptionPane.showInputDialog("Digite o valor da segunda reta:");
+	double r1d = Double.parseDouble(r1);
+	double r2d = Double.parseDouble(r2);
+	double r3d = Double.parseDouble(r3);
+
+	if (r1d + r2d > r3d && r2d + r3d > r1d && r1d + r3d > r2d) {
+		System.out.println("As três retas FORMAM um triângulo"); 
+		if (r1d == r2d && r2d == r3d && r3d == r1d) {
+			System.out.println("O triângulo formado é EQUILÁTERO"); 
+		}
+		else if (r1d != r2d && r2d != r3d && r3d != r1d) {
+			System.out.println("O triângulo formado é ESCALENO");
+	}
+		else
+			System.out.println("O triângulo formado é ISÓSCELES");
+		}
+	else
+		System.out.println("As três retas NÃO FORMAM um triângulo");
+		
+}
+}

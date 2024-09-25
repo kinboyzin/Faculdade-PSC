@@ -1,0 +1,27 @@
+package fundamentos;
+
+import javax.swing.JOptionPane;
+
+public class FACULDADE_ATV3 {
+public static void main(String[] args) {
+	String verbo = JOptionPane.showInputDialog("Escreva um verbo no infinitivo:").toLowerCase().trim();
+	if (verbo.endsWith("ar")) {
+		System.out.println("O verbo é da primeira conjulgação");
+	}
+	else if (verbo.endsWith("er")) {
+		System.out.println("O verbo é da segunda conjulgação");
+	}
+	else if (verbo.endsWith("ir")) {
+		System.out.println("O verbo está na terceira conjulgação");
+	}
+	else if (verbo.endsWith("or")) {
+		System.out.println("O verbo não está no infinitivo");
+	}
+	else if (verbo.endsWith("ur")) {
+		System.out.println("O verbo não está no infinitivo");
+	}
+	else
+		System.out.println("A palavra escrita não é verbo");
+			
+}
+}
